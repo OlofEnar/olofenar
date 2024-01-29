@@ -77,16 +77,17 @@ h1 {
   font-family: "Marvin Visions", sans-serif;
   font-size: 3rem;
   line-height: 1;
+  margin: 0.4 0;
 }
 
 .title-wrapper {
   text-align: center;
-  margin: 5em;
+  margin: 3em;
+}
 
-  & p {
-    font-size: 1.2rem;
-    margin: 0.5em;
-  }
+.title-wrapper p {
+  font-size: 1.2rem;
+  margin: 1em;
 }
 
 .social-icons img {
@@ -250,6 +251,11 @@ header a {
       cursor: pointer;
     }
   }
+
+  .title-wrapper {
+    margin: 5em;
+  }
+
   .title-wrapper p {
     font-size: 1.5rem;
     margin: 1em;
