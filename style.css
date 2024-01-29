@@ -1,0 +1,299 @@
+:root {
+  --clr-primary: #ffdd7e;
+  --clr-black: #0e1111;
+  --clr-accent: grey;
+  /* --clr-secondary:
+  --clr-alert: */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Marvin Visions";
+  font-style: bold;
+  src: url("assets/fonts/MarvinVisionsBig-Bold.woff2") format("woff2"),
+    url("assets/fonts/MarvinVisionsBig-Bold.woff") format("woff");
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+}
+
+#bg {
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  background-image: linear-gradient(0deg, #a6c3a1ff 0%, #b7e5b4 100%);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-primary);
+  height: 60px;
+  padding: 30px;
+}
+
+nav ul {
+  display: none;
+  list-style-type: none;
+  text-transform: uppercase;
+
+  & a {
+    color: var(--clr-black);
+  }
+
+  & li {
+    padding: 1em 1.5em;
+  }
+}
+
+#menu-toggle {
+  display: block;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--clr-black);
+}
+
+main {
+  width: 85%;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Marvin Visions", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.title-wrapper {
+  text-align: center;
+  margin: 5em;
+
+  & p {
+    font-size: 1.2rem;
+    margin: 0.5em;
+  }
+}
+
+.social-icons img {
+  padding: 0 0.3em;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/* PORTFOLIO page */
+
+.card {
+  position: relative;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  background-color: beige;
+  border-radius: 10px;
+  margin: 1em;
+
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.card-heading {
+  text-align: end;
+  width: 100%;
+  height: 25%;
+  padding: 0.75em;
+  background: blanchedalmond;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-category {
+  font-size: small;
+  color: var(--clr-accent);
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75%;
+}
+
+.card-img img {
+  max-width: 100%;
+  border-radius: 0 0 10px 10px;
+  object-fit: cover;
+}
+
+#page-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CV page */
+
+.resume-container {
+  width: 100%;
+}
+
+.resume-container .fa {
+  padding: 0 0.5em;
+}
+
+.academic-container {
+  display: none;
+}
+
+.job-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  line-height: 1.5em;
+}
+
+.work-period {
+  margin: 0 0 1em 0;
+}
+
+.work-info {
+  display: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table-categories {
+  display: none;
+}
+
+.btn-container {
+  height: 60px;
+  width: 300px;
+  /* box-shadow: 10px 10px 30px rgb(254, 215, 188); */
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: -60px;
+  left: 0;
+}
+
+.btn-text-only {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slider-container {
+  width: 300px;
+  height: 60px;
+  margin: 3em auto;
+}
+
+.slider {
+  height: 60px;
+  width: 138px;
+  border-radius: 50px;
+  background: var(--clr-primary);
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.moveslider {
+  left: 150px;
+}
+
+.hide-section {
+  display: none;
+}
+
+.show-section {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    transition: top ease 0.1s;
+
+    &:hover {
+      top: -5px;
+      cursor: pointer;
+    }
+  }
+  .title-wrapper p {
+    font-size: 1.5rem;
+    margin: 1em;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+
+  .resume-container {
+    width: 70%;
+    margin: auto;
+  }
+
+  .job-info {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 1em;
+  }
+
+  .work-info {
+    display: block;
+  }
+
+  .work-period {
+    text-align: end;
+  }
+
+  .table-categories {
+    display: grid;
+    font-weight: bold;
+  }
+
+  .resume-container .fa {
+    display: none;
+  }
+}

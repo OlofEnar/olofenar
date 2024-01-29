@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("assets/fonts/MarvinVisionsBig-Bold.woff2");
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+    </style>
+    <title>Cv</title>
+  </head>
+  <body>
+      <header>
+        <nav>
+          <a href="index.html" class="logo"></a>
+          <div id="menu-toggle"><i class="fa fa-2x fa-bars"></i></div>
+          <ul class="menu-items">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="about.html">Om mig</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="title-wrapper">
+          <h1>CV</h1>
+          <p>En salig blandning gör människan hel</p>
+        </div>
+      </header>
+      <main>
+        <article>
+            <div class="slider-container">
+            <div class="slider"></div>
+            <div class="btn-container">
+                <button class="btn-text-only" id="work">Arbete</button>
+                <button class="btn-text-only" id="academic">Utbildning</button>                     
+            </div>
+            </div>
+            <div class="resume-container" id="work-container">
+            <div class="job-info table-categories">
+              <p class="work-title">Position</p>
+              <p class="work-place">Företag</p>
+              <p class="work-period">Period</p>
+            </div>
+          </div>
+          <div class="resume-container academic-container" id="academic-container">
+            <div class="job-info table-categories">
+              <p class="work-title">Utbildning</p>
+              <p class="work-place">Plats</p>
+              <p class="work-period">Period</p>
+            </div>
+        </article>
+      </main>
+      <aside></aside>
+      <footer></footer>
+    </div>
+    <script src="fetchjson.js"></script>
+    <script>
+        let academic = document.querySelector("#academic");
+        let work = document.querySelector("#work");
+        let slider = document.querySelector(".slider");
+        let academicSection = document.querySelector("#academic-container")
+        let workSection = document.querySelector("#work-container")
+
+        academic.addEventListener("click", () => {
+            slider.classList.add("moveslider");
+            academicSection.classList.add("show-section")
+            workSection.classList.add("hide-section")
+        });
+        
+        work.addEventListener("click", () => {
+            slider.classList.remove("moveslider");
+            academicSection.classList.remove("show-section")
+            workSection.classList.remove("hide-section")
+});
+    </script>
+  </body>
+</html>
