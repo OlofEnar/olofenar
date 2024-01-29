@@ -15,27 +15,88 @@
     <title>Kontakt</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html" class="logo"></a>
-        <div id="menu-toggle"><i class="fa fa-2x fa-bars"></i></div>
-        <ul class="menu-items">
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="about.html">Om mig</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-      </nav>
-      <div class="title-wrapper">
-        <h1>
-          Hör av dig nedan<br />
-          om du vill prata!
-        </h1>
-      </div>
-    </header>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    <div id="bg">
+      <header>
+        <nav>
+          <a href="index.html" class="logo"></a>
+          <div id="menu-toggle"><i class="fa fa-2x fa-bars"></i></div>
+          <ul class="menu-items">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="about.html">Om mig</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="title-wrapper">
+          <h1>Kontakt</h1>
+          <p>
+            Hör av dig ifall du har något<br />
+            spännande projekt som du vill förverkliga
+          </p>
+        </div>
+      </header>
+      <main>
+        <div class="form_container">
+          <div class="form">
+            <form action="" method="post">
+              <div class="form_items">
+                <label for="name">Förnamn</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Emmet"
+                />
+              </div>
+              <div class="form_items">
+                <label for="name">Efternamn</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Brown"
+                />
+              </div>
+
+              <div class="form_items">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="emmet@brown.com"
+                />
+              </div>
+
+              <div class="form_items">
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+
+              <input
+                id="SendButton"
+                type="submit"
+                class="button button_centered"
+                value="Skicka"
+              />
+            </form>
+          </div>
+        </div>
+      </main>
+      <aside></aside>
+      <footer>
+        <div class="social-icons">
+          <a href="https://github.com/OlofEnar"
+            ><img src="assets/icons/github.svg"
+          /></a>
+          <a href="linkedin.com"><img src="assets/icons/linkedin.svg" /></a>
+          <a href="https://dribbble.com/OlofNordin"
+            ><img src="assets/icons/dribbble.svg"
+          /></a>
+        </div>
+        <p>© Olof Maleki Nordin</p>
+      </footer>
+    </div>
   </body>
 </html>
