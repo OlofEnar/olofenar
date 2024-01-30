@@ -98,5 +98,26 @@
         <p>© Olof Maleki Nordin</p>
       </footer>
     </div>
+    <script>
+      // Script for the resposive menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuItems = document.querySelector(".menu-items");
+
+        // Add click event listener to menu toggle
+        menuToggle.addEventListener("click", function () {
+          // Toggle the active class on menu items
+          menuItems.classList.toggle("active");
+        });
+
+        // Add resize event listener to adjust menu items on window resize
+        window.addEventListener("resize", function () {
+          // If the window width is greater than 767px, ensure menu items are visible
+          if (window.innerWidth > 767) {
+            menuItems.classList.remove("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

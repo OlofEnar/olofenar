@@ -47,12 +47,10 @@ footer {
 
 /* NAV */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   background: var(--clr-primary);
   height: 60px;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 nav ul {
@@ -60,20 +58,38 @@ nav ul {
   list-style-type: none;
   text-transform: uppercase;
 
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 1em 0;
+  background-color: var(--clr-primary);
+
   & a {
     color: var(--clr-black);
   }
 
   & li {
-    padding: 1em 1.5em;
+    padding: 0 0 1.5em;
   }
+}
+
+nav ul.active {
+  display: block; /* Show menu items when active class is applied */
 }
 
 #menu-toggle {
   display: block;
+  position: absolute;
+  top: 15px;
+  right: 30px;
 }
 
 .logo {
+  position: absolute;
+  top: 15px;
+  left: 30px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -208,7 +224,6 @@ header a {
 .btn-container {
   height: 60px;
   width: 300px;
-  /* box-shadow: 10px 10px 30px rgb(254, 215, 188); */
   border-radius: 50px;
   display: flex;
   justify-content: space-around;
@@ -276,7 +291,7 @@ header a {
 
 .form_container {
   padding: 1em;
-  background: beige;
+  background: white;
   border-radius: 15px;
   margin: 5em auto;
   max-width: 500px;
@@ -346,10 +361,27 @@ label {
     display: none;
   }
 
+  .logo {
+    position: unset;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
   nav ul {
     display: flex;
+    position: unset;
     list-style-type: none;
     text-transform: uppercase;
+    width: inherit;
+
+    & li {
+      padding: 1em 1.5em;
+    }
   }
 
   .resume-container {

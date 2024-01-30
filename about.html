@@ -26,6 +26,7 @@
             <li><a href="about.html">Om mig</a></li>
             <li><a href="contact.html">Kontakt</a></li>
           </ul>
+      </div>
         </nav>
         <div class="title-wrapper">
           <h1>Om mig</h1>
@@ -36,5 +37,25 @@
         </article>
       </main>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuItems = document.querySelector('.menu-items');
+
+        // Add click event listener to menu toggle
+        menuToggle.addEventListener('click', function() {
+          // Toggle the active class on menu items
+          menuItems.classList.toggle('active');
+        });
+
+        // Add resize event listener to adjust menu items on window resize
+        window.addEventListener('resize', function() {
+          // If the window width is greater than 767px, ensure menu items are visible
+          if (window.innerWidth > 767) {
+            menuItems.classList.remove('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
